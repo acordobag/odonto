@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
+
 from odoo import models, fields, api
 
-class customer(models.Model):
+class Customer(models.Model):
     _inherit = 'res.partner'
 
-    person_id = fields.Char('Cédula')
+    person_id = fields.Char('Cedula')
