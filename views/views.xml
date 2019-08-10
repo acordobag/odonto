@@ -1,59 +1,43 @@
 <odoo>
   <data>
-    <!-- explicit list view definition -->
-    <!--
-    <record model="ir.ui.view" id="odonto.list">
-      <field name="name">odonto list</field>
-      <field name="model">odonto.odonto</field>
+    <record id="view_form_customer_inherited" model="ir.ui.view">
+      <field name="name">Customers form</field>
+      <field name="model">res.partner</field>
+      <field name="inherit_id" ref="base.view_partner_form"/>
       <field name="arch" type="xml">
-        <tree>
-          <field name="name"/>
-          <field name="value"/>
-          <field name="value2"/>
-        </tree>
+        <!-- Hide no using fields -->
+        <field name="parent_id" position="before">
+         <field name="person_id" placeholder="Cédula"/><br/>
+         <field name="zone_id" placeholder="Zona"/>
+        </field>
+        <xpath expr="/form/sheet/notebook/page[1]" position="attributes">
+          <attribute name="attrs">{"invisible":[("is_company","!=",True)]}</attribute>
+        </xpath>
+        <xpath expr="/form/sheet/notebook/page[3]" position="attributes">
+          <attribute name="attrs">{"invisible":[("customer","=",True)]}</attribute>
+        </xpath>
+
+        <field name="website" position="attributes">
+          <attribute name="attrs">{"invisible":[("customer","=",True)]}</attribute>
+        </field>
+
+        <field name="category_id" position="attributes">
+          <attribute name="attrs">{"invisible":[("customer","=",True)]}</attribute>
+        </field>
+
+        <field name="function" position="attributes">
+          <attribute name="attrs">{"invisible":[("customer","=",True)]}</attribute>
+        </field>
+
+        <field name="lang" position="attributes">
+          <attribute name="attrs">{"invisible":[("customer","=",True)]}</attribute>
+        </field>
+
+        <field name="zip" position="attributes">
+          <attribute name="attrs">{"invisible":[("customer","=",True)]}</attribute>
+        </field>
+
       </field>
     </record>
-    -->
-
-    <!-- actions opening views on models -->
-    <!--
-    <record model="ir.actions.act_window" id="odonto.action_window">
-      <field name="name">odonto window</field>
-      <field name="res_model">odonto.odonto</field>
-      <field name="view_mode">tree,form</field>
-    </record>
-    -->
-
-    <!-- server action to the one above -->
-    <!--
-    <record model="ir.actions.server" id="odonto.action_server">
-      <field name="name">odonto server</field>
-      <field name="model_id" ref="model_odonto_odonto"/>
-      <field name="code">
-        action = {
-          "type": "ir.actions.act_window",
-          "view_mode": "tree,form",
-          "res_model": self._name,
-        }
-      </field>
-    </record>
-    -->
-
-    <!-- Top menu item -->
-    <!--
-    <menuitem name="odonto" id="odonto.menu_root"/>
-    -->
-    <!-- menu categories -->
-    <!--
-    <menuitem name="Menu 1" id="odonto.menu_1" parent="odonto.menu_root"/>
-    <menuitem name="Menu 2" id="odonto.menu_2" parent="odonto.menu_root"/>
-    -->
-    <!-- actions -->
-    <!--
-    <menuitem name="List" id="odonto.menu_1_list" parent="odonto.menu_1"
-              action="odonto.action_window"/>
-    <menuitem name="Server to list" id="odonto" parent="odonto.menu_2"
-              action="odonto.action_server"/>
-    -->
   </data>
 </odoo>
