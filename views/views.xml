@@ -8,7 +8,6 @@
         <!-- Hide no using fields -->
         <field name="parent_id" position="before">
          <field name="person_id" placeholder="Cédula"/><br/>
-         <field name="zone_id" placeholder="Zona"/>
         </field>
         <xpath expr="/form/sheet/notebook/page[1]" position="attributes">
           <attribute name="attrs">{"invisible":[("is_company","!=",True)]}</attribute>
