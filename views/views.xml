@@ -6,7 +6,7 @@
       <field name="inherit_id" ref="base.view_partner_form"/>
       <field name="arch" type="xml">
         <!-- Hide no using fields -->
-        <field name="parent_id" position="before">
+        <field name="category_id" position="after">
          <field name="person_id" placeholder="Cédula"/><br/>
         </field>
         <xpath expr="/form/sheet/notebook/page[1]" position="attributes">
