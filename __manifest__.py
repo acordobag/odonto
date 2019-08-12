@@ -3,15 +3,14 @@
     'name': "odonto",
 
     'summary': """
-        Short (1 phrase/line) summary of the module's purpose, used as
-        subtitle on modules listing or apps.openerp.com""",
+        Modulo para odontología""",
 
     'description': """
-        Long description of module's purpose
+        Modulo para odontología
     """,
 
     'author': "Adrián Córdoba",
-    'website': "http://www.yourcompany.com",
+    'website': "",
     "application": True,
 
     # Categories can be used to filter modules in modules listing
@@ -26,7 +25,7 @@
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
-        'views/views.xml'
+        #'views/views.xml'
     ]
     # only loaded in demonstration mode
     # 'demo': [
