@@ -1,14 +1,19 @@
 <odoo>
   <data>
     <record id="view_form_customer_inherited" model="ir.ui.view">
-      <field name="name">Customers form</field>
+      <field name="name">res.partner.customer.form</field>
       <field name="model">res.partner</field>
       <field name="inherit_id" ref="base.view_partner_form"/>
       <field name="arch" type="xml">
         <!-- Hide no using fields -->
         <field name="category_id" position="after">
-         <field name="person_id" placeholder="Cédula"/><br/>
+          <field name="person_id" placeholder="Cédula"/>
         </field>
+      </field>
+    </record>
+  </data>
+</odoo>
+
         <!-- <xpath expr="/form/sheet/notebook/page[1]" position="attributes">
           <attribute name="attrs">{"invisible":[("is_company","!=",True)]}</attribute>
         </xpath>
@@ -35,8 +40,3 @@
         <field name="zip" position="attributes">
           <attribute name="attrs">{"invisible":[("customer","=",True)]}</attribute>
         </field> -->
-
-      </field>
-    </record>
-  </data>
-</odoo>
