@@ -9,7 +9,7 @@
         <field name="category_id" position="after">
          <field name="person_id" placeholder="Cédula"/><br/>
         </field>
-        <xpath expr="/form/sheet/notebook/page[1]" position="attributes">
+        <!-- <xpath expr="/form/sheet/notebook/page[1]" position="attributes">
           <attribute name="attrs">{"invisible":[("is_company","!=",True)]}</attribute>
         </xpath>
         <xpath expr="/form/sheet/notebook/page[3]" position="attributes">
@@ -34,7 +34,7 @@
 
         <field name="zip" position="attributes">
           <attribute name="attrs">{"invisible":[("customer","=",True)]}</attribute>
-        </field>
+        </field> -->
 
       </field>
     </record>
