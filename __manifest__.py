@@ -3,10 +3,10 @@
     'name': "odonto",
 
     'summary': """
-        Modulo para odontología""",
+        Modulo para odontologia""",
 
     'description': """
-        Modulo para odontología
+        Modulo para odontologia
     """,
 
     'author': "Adrián Córdoba",
