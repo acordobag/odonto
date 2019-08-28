@@ -18,7 +18,7 @@ class doctor(models.Model):
     _inherit = 'res.users'
 
     is_doctor = fields.Boolean('Es doctor?')
-    citas = fields.One2many('cxc.route','driver_id','Rutas')
+    citas = fields.One2many('cxc.route','user_id','Rutas')
 
 
 class driver(models.Model):
