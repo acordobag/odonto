@@ -8,7 +8,7 @@
         <!-- Hide no using fields -->
         <field name="category_id" position="after">
           <field name="person_id" placeholder="Cédula"/>
-          <field name="job_id"/>
+          <!-- <field name="job_id"/> -->
         </field>
         <xpath expr="/form/sheet/notebook/page[1]" position="attributes">
           <attribute name="attrs">{"invisible":[("is_company","!=",True)]}</attribute>
