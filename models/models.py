@@ -7,6 +7,7 @@ class Job(models.Model):
     _name = 'odonto.job'
 
     name = fields.Char('Nombre del puesto')
+    people = fields.One2many('res.partner','job_id', 'Gente')
 
 
 class Customer(models.Model):
