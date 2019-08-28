@@ -14,4 +14,4 @@ class Customer(models.Model):
     _inherit = 'res.partner'
 
     person_id = fields.Char(string="Cédula")
-    # job_id = fields.Many2one('odonto.job', string="Puesto")
+    job_id = fields.Many2one('odonto.job', string="Puesto")
