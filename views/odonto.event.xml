@@ -5,7 +5,20 @@
       <field name="model">calendar.event</field>
       <field name="inherit_id" ref="calendar.view_calendar_event_form"/>
       <field name="arch" type="xml">
-        <field name="partner_ids" position="after">
+
+        <field name="categ_ids" position="attributes">
+          <attribute name="attrs">{"invisible":[True]}</attribute>
+        </field>
+
+        <field name="allday" position="attributes">
+          <attribute name="attrs">{"invisible":[True]}</attribute>
+        </field>
+
+        <xpath expr="/form/sheet/notebook/page[3]" position="attributes">
+          <attribute name="attrs">{"invisible":[True]}</attribute>
+        </xpath>
+
+        <field name="categ_ids" position="after">
           <field name="user_id"/>
         </field>
       </field>
