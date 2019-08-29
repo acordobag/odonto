@@ -21,7 +21,7 @@ class doctor(models.Model):
     # events = fields.One2many('calendar.event','user_id','Citas')
 
 
-class driver(models.Model):
-    _inherit = 'calendar.event'
+# class driver(models.Model):
+#     _inherit = 'calendar.event'
 
     # user_id = fields.Many2one('res.users', 'Doctor')
