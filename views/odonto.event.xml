@@ -3,7 +3,7 @@
     <record id="view_form_event_inherited" model="ir.ui.view">
       <field name="name">calendar.event.form</field>
       <field name="model">calendar.event</field>
-      <field name="inherit_id" ref="calendar.view_calendar_event_form_popup"/>
+      <field name="inherit_id" ref="calendar.view_calendar_event_form"/>
       <field name="arch" type="xml">
         <field name="partner_ids" position="after">
           <field name="user_id"/>
