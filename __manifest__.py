@@ -26,7 +26,7 @@
     'data': [
         # 'security/ir.model.access.csv',
         'views/odonto.customer.xml',
-        # 'views/odonto.event.xml'
+        'views/odonto.event.xml'
     ]
     # only loaded in demonstration mode
     # 'demo': [
