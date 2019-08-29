@@ -12,6 +12,7 @@ class Customer(models.Model):
     marital_status = fields.Selection(
         [(1, 'Soltero'), (2, 'Casado(a)'), (3, 'Divorciado(a)'), (2, 'Viudo(a)')], 'Estado civil')
     gender = fields.Selection([(1, 'Masculino'), (2, 'Femenino')], 'Género')
+    quiz_id = fields.Many2one('odonto.quiz', 'Cuestionario')
 
 
 class doctor(models.Model):
@@ -25,3 +26,10 @@ class driver(models.Model):
     _inherit = 'calendar.event'
 
     #user_id = fields.Many2one('res.users', 'Médico responsable')
+
+class quiz(models.Model):
+    _name = 'odonto.quiz'
+    
+    was_patient = fields.Boolean('Ha sido paciente en un hospital en los ultimnos años')
+
+
