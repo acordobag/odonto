@@ -33,6 +33,6 @@ class quiz(models.Model):
     why_was_patient = fields.Char(string='Porque?')
     whe_was_patient = fields.Char(string='Donde?')
 
-    was_hospitalized = fields.Boolean(string='¿Ha estado bajo atención médica durante los ultimos dos años?')
-    why_was_hospitalized = fields.Char(string='Porque?')
-    whe_was_hospitalized = fields.Char(string='Donde?')
+    was_hospit = fields.Boolean(string='¿Ha estado bajo atención médica durante los ultimos dos años?')
+    why_was_hospit = fields.Char(string='Porque?')
+    whe_was_hospit = fields.Char(string='Donde?')

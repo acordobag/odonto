@@ -51,9 +51,9 @@
                 <field name="why_was_patient" attrs="{'invisible': [('was_patient', '=', False)]}"/>
                 <field name="where_was_patient" attrs="{'invisible': [('was_patient', '=', False)]}"/>
 
-                <field name="was_hospitalized"/>
-                <field name="why_was_hospitalized" attrs="{'invisible': [('was_hospitalized', '=', False)]}"/>
-                <field name="where_was_hospitalized" attrs="{'invisible': [('was_hospitalized', '=', False)]}"/>
+                <field name="was_hospit"/>
+                <field name="why_was_hospit" attrs="{'invisible': [('was_hospit', '=', False)]}"/>
+                <field name="where_was_hospit" attrs="{'invisible': [('was_hospit', '=', False)]}"/>
 
               </group>
             </form>
