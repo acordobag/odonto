@@ -26,22 +26,8 @@
           <field name="work_place"/>
         </field>
 
-        <field name="function" position="inside">
-          <page string="Cuestionario">
-            <form string="Cuertiorio">
-              <group colspan="4">
-
-                <field name="was_patient"/>
-                <field name="why_was_patient" attrs="{'invisible': [('was_patient', '=', False)]}"/>
-                <field name="where_was_patient" attrs="{'invisible': [('was_patient', '=', False)]}"/>
-                
-                <field name="was_hospitalized"/>
-                <field name="why_was_hospitalized" attrs="{'invisible': [('was_hospitalized', '=', False)]}"/>
-                <field name="where_was_hospitalized" attrs="{'invisible': [('was_hospitalized', '=', False)]}"/>
-                
-              </group>
-            </form>
-          </page>
+        <field name="function" position="attributes">
+          <attribute name="string">Ocupación</attribute>
         </field>
 
         <field name="fax" position="attributes">
@@ -56,9 +42,24 @@
           <attribute name="string">Tel. Celular</attribute>
         </field>
 
-        <xpath expr="/form/sheet/notebook" position="attributes">
-          <attribute name="attrs">{"invisible":[("is_company","!=",True)]}</attribute>
+        <xpath expr="/form/sheet/notebook" position="inside">
+          <page string="Cuestionario">
+            <form string="Cuestionario">
+              <group colspan="8">
+
+                <field name="was_patient"/>
+                <field name="why_was_patient" attrs="{'invisible': [('was_patient', '=', False)]}"/>
+                <field name="where_was_patient" attrs="{'invisible': [('was_patient', '=', False)]}"/>
+
+                <field name="was_hospitalized"/>
+                <field name="why_was_hospitalized" attrs="{'invisible': [('was_hospitalized', '=', False)]}"/>
+                <field name="where_was_hospitalized" attrs="{'invisible': [('was_hospitalized', '=', False)]}"/>
+
+              </group>
+            </form>
+          </page>
         </xpath>
+
         <!-- Hide no using fields -->
         <xpath expr="/form/sheet/notebook/page[1]" position="attributes">
           <attribute name="attrs">{"invisible":[("is_company","!=",True)]}</attribute>
