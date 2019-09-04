@@ -29,10 +29,10 @@ class driver(models.Model):
 class quiz(models.Model):
     _name = 'odonto.quiz'
     
-    q1 = fields.Boolean(string='¿Ha sido paciente en un hospital en los ultimnos años')
-    why_q1 = fields.Char(string='Porque?')
-    where_q1 = fields.Char(string='Donde?')
+    was_patient = fields.Boolean(string='¿Ha sido paciente en un hospital en los ultimnos años')
+    why_was_patient = fields.Char(string='Porque?')
+    whe_was_patient = fields.Char(string='Donde?')
 
-    q2 = fields.Boolean(string='¿Ha estado bajo atención médica durante los ultimos dos años?')
-    why_q2 = fields.Char(string='Porque?')
-    where_q2 = fields.Char(string='Donde?')
+    was_hospitalized = fields.Boolean(string='¿Ha estado bajo atención médica durante los ultimos dos años?')
+    why_was_hospitalized = fields.Char(string='Porque?')
+    whe_was_hospitalized = fields.Char(string='Donde?')
