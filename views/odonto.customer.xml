@@ -42,7 +42,7 @@
           <attribute name="string">Tel. Celular</attribute>
         </field>
 
-        <xpath expr="/form/sheet/notebook" position="inside">
+        <!-- <xpath expr="/form/sheet/notebook" position="inside">
           <page string="Cuestionario">
             <form string="Cuestionario">
               <group colspan="8">
@@ -58,7 +58,7 @@
               </group>
             </form>
           </page>
-        </xpath>
+        </xpath> -->
 
         <!-- Hide no using fields -->
         <xpath expr="/form/sheet/notebook/page[1]" position="attributes">
