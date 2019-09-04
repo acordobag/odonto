@@ -16,7 +16,8 @@ class quiz(models.Model):
     why_was_hospitalized = fields.Char(string='Porque?')
     whe_was_hospitalized = fields.Char(string='Donde?')
 
-    class Customer(models.Model):
+
+class Customer(models.Model):
     _inherit = 'res.partner'
 
     person_id = fields.Char(string="Cédula")
