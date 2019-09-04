@@ -9,17 +9,16 @@ class Customer(models.Model):
     person_id = fields.Char(string="Cédula")
     work_place = fields.Char(string="Lugar de trabajo")
     birthdate = fields.Date(string="Fecha de nacimiento")
-    marital_status = fields.Selection(
-        [(1, 'Soltero'), (2, 'Casado(a)'), (3, 'Divorciado(a)'), (2, 'Viudo(a)')], 'Estado civil')
+    marital_status = fields.Selection([(1, 'Soltero'), (2, 'Casado(a)'), (3, 'Divorciado(a)'), (2, 'Viudo(a)')], 'Estado civil')
     gender = fields.Selection([(1, 'Masculino'), (2, 'Femenino')], 'Género')
-    quiz_id = fields.Many2one('odonto.quiz', 'Cuestionario')
+    quiz_id = fields.Many2one('odonto.quiz', string='Cuestionario')
 
 
 class doctor(models.Model):
     _inherit = 'res.users'
 
     is_doctor = fields.Boolean(string='Es doctor?')
-    events = fields.One2many('calendar.event','user_id','Citas')
+    events = fields.One2many('calendar.event','user_id',string='Citas')
 
 
 class driver(models.Model):
