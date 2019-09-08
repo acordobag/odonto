@@ -6,13 +6,13 @@ from odoo import models, fields, api
 class quiz(models.Model):
     _name = 'odonto.quiz'
 
-    was_patient = fields.Boolean(
-        string='¿Ha sido paciente en un hospital en los ultimnos años')
+    customers = fields.One2many('res.partner', 'quiz_id', string='Clientes')
+    #Prueba
+    was_patient = fields.Boolean(string='¿Ha sido paciente en un hospital en los ultimnos años')
     why_was_patient = fields.Char(string='Porque?')
     whe_was_patient = fields.Char(string='Donde?')
 
-    was_hospitalized = fields.Boolean(
-        string='¿Ha estado bajo atención médica durante los ultimos dos años?')
+    was_hospitalized = fields.Boolean(string='¿Ha estado bajo atención médica durante los ultimos dos años?')
     why_was_hospitalized = fields.Char(string='Porque?')
     whe_was_hospitalized = fields.Char(string='Donde?')
 
@@ -23,8 +23,7 @@ class Customer(models.Model):
     person_id = fields.Char(string="Cédula")
     work_place = fields.Char(string="Lugar de trabajo")
     birthdate = fields.Date(string="Fecha de nacimiento")
-    marital_status = fields.Selection(
-        [(1, 'Soltero'), (2, 'Casado(a)'), (3, 'Divorciado(a)'), (2, 'Viudo(a)')], 'Estado civil')
+    marital_status = fields.Selection([(1, 'Soltero'), (2, 'Casado(a)'), (3, 'Divorciado(a)'), (2, 'Viudo(a)')], 'Estado civil')
     gender = fields.Selection([(1, 'Masculino'), (2, 'Femenino')], 'Género')
     quiz_id = fields.Many2one('odonto.quiz', string='Cuestionario')
 
@@ -39,4 +38,4 @@ class doctor(models.Model):
 class driver(models.Model):
     _inherit = 'calendar.event'
 
-    #user_id = fields.Many2one('res.users', 'Médico responsable')
+    user_id = fields.Many2one('res.users', string='Médico responsable')
