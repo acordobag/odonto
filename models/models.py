@@ -38,4 +38,4 @@ class doctor(models.Model):
 class driver(models.Model):
     _inherit = 'calendar.event'
 
-    user_id = fields.Many2one('res.users', string='Médico responsable')
+    #user_id = fields.Many2one('res.users', string='Médico responsable')
