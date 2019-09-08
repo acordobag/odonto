@@ -25,7 +25,7 @@ class Customer(models.Model):
     birthdate = fields.Date(string="Fecha de nacimiento")
     marital_status = fields.Selection([(1, 'Soltero'), (2, 'Casado(a)'), (3, 'Divorciado(a)'), (2, 'Viudo(a)')], 'Estado civil')
     gender = fields.Selection([(1, 'Masculino'), (2, 'Femenino')], 'Género')
-    o_quiz_id = fields.Many2one('odonto.quiz', string='Cuestionario')
+    quiz_id = fields.Many2one('odonto.quiz', string='Cuestionario')
 
 
 class doctor(models.Model):
