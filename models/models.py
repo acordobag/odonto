@@ -6,7 +6,7 @@ from odoo import models, fields, api
 class quiz(models.Model):
     _name = 'odonto.quiz'
 
-    customers = fields.One2many('res.partner', 'quiz_id', string='Clientes')
+    # customers = fields.One2many('res.partner', 'quiz_id', string='Clientes')
     #Prueba
     was_patient = fields.Boolean(string='¿Ha sido paciente en un hospital en los ultimnos años')
     why_was_patient = fields.Char(string='Porque?')
@@ -25,7 +25,7 @@ class Customer(models.Model):
     birthdate = fields.Date(string="Fecha de nacimiento")
     marital_status = fields.Selection([(1, 'Soltero'), (2, 'Casado(a)'), (3, 'Divorciado(a)'), (2, 'Viudo(a)')], 'Estado civil')
     gender = fields.Selection([(1, 'Masculino'), (2, 'Femenino')], 'Género')
-    quiz_id = fields.Many2one('odonto.quiz', string='Cuestionario')
+    o_quiz_id = fields.Many2one('odonto.quiz', string='Cuestionario')
 
 
 class doctor(models.Model):
