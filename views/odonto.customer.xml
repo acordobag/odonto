@@ -47,13 +47,13 @@
             <form string="Cuestionario">
               <group colspan="8">
 
-                <field name="quiz_id.was_patient"/>
-                <field name="quiz_id.why_was_patient" attrs="{'invisible': [('quiz_id.was_patient', '=', False)]}"/>
-                <field name="quiz_id.whe_was_patient" attrs="{'invisible': [('quiz_id.was_patient', '=', False)]}"/>
+                <field name="was_patient"/>
+                <field name="why_was_patient" attrs="{'invisible': [('was_patient', '=', False)]}"/>
+                <field name="whe_was_patient" attrs="{'invisible': [('was_patient', '=', False)]}"/>
 
-                <field name="quiz_id.was_hospitalized"/>
-                <field name="quiz_id.why_was_hospitalized" attrs="{'invisible': [('quiz_id.was_hospitalized', '=', False)]}"/>
-                <field name="quiz_id.whe_was_hospitalized" attrs="{'invisible': [('quiz_id.was_hospitalized', '=', False)]}"/>
+                <field name="was_hospitalized"/>
+                <field name="why_was_hospitalized" attrs="{'invisible': [('was_hospitalized', '=', False)]}"/>
+                <field name="whe_was_hospitalized" attrs="{'invisible': [('was_hospitalized', '=', False)]}"/>
 
               </group>
             </form>
