@@ -55,6 +55,25 @@
                 <field name="why_was_hospitalized" attrs="{'invisible': [('was_hospitalized', '=', False)]}"/>
                 <field name="whe_was_hospitalized" attrs="{'invisible': [('was_hospitalized', '=', False)]}"/>
 
+                <field name="was_consuming_drugs"/>
+                <field name="whi_was_consuming_drugs" attrs="{'invisible': [('was_consuming_drugs', '=', False)]}"/>
+                <field name="why_was_consuming_drugs" attrs="{'invisible': [('was_consuming_drugs', '=', False)]}"/>
+
+                <field name="is_allergic"/>
+                <field name="which_ones_is_allergic" attrs="{'invisible': [('is_allergic', '=', False)]}"/>
+
+                <field name="is_allergic"/>
+
+                <field name="are_pregnant"/>
+                <field name="how_many_weeks" attrs="{'invisible': [('are_pregnant', '=', False)]}"/>
+
+                <field name="are_breastfeeding"/>
+
+                <field name="treatment_for_osteoporosis"/>
+                <field name="wich_one_medicament" attrs="{'invisible': [('treatment_for_osteoporosis', '=', False)]}"/>
+
+                <field name="emergency_contact_name"/>
+                <field name="emergency_contact_number"/>
               </group>
             </form>
           </page>

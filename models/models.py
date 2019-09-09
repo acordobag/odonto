@@ -26,9 +26,9 @@ class Customer(models.Model):
     marital_status = fields.Selection([(1, 'Soltero'), (2, 'Casado(a)'), (3, 'Divorciado(a)'), (2, 'Viudo(a)')], 'Estado civil')
     gender = fields.Selection([(1, 'Masculino'), (2, 'Femenino')], 'Género')
     # quiz_id = fields.Many2one('odonto.quiz', string='Cuestionario')
-    
+
     #Medical quiz
-    was_patient = fields.Boolean(string='¿Ha sido paciente en un hospital en los ultimnos años')
+    was_patient = fields.Boolean(string='¿Ha sido paciente en un hospital en los últimos años?')
     why_was_patient = fields.Char(string='¿Porque?')
     whe_was_patient = fields.Char(string='¿Donde?')
 
@@ -40,22 +40,28 @@ class Customer(models.Model):
     whi_was_consuming_drugs = fields.Char(string='¿Cual?')
     why_was_consuming_drugs = fields.Char(string='¿Porque?')
 
-    is_allergic_anesthesia = fields.Boolean(string='¿Ha tomado algún medicamento o droga durante el último año?')
-    which_ones_is_allergic = fields.Char(string='¿Cuales?')
+    is_allergic = fields.Boolean(string='¿Es alérgico a la anestesia, antibioticos o medicamentos?')
+    which_ones_is_allergic = fields.Char(string='¿Cuáles?')
 
     has_an_hemorrhage = fields.Boolean(string='¿Ha tenido alguna hemorragia que haya tenido que ser tratada?')
 
-    has_another_disease = fields.Boolean(string="¿Ha tenido alguna otra enfermedad?")
-    which_another_disease = fields.Char(string="¿Cual?")
+    # has_another_disease = fields.Boolean(string="¿Ha tenido alguna otra enfermedad?")
+    # which_another_disease = fields.Char(string="¿Cual?")
 
     are_pregnant = fields.Boolean(string="¿Está embarazada?")
     how_many_weeks = fields.Char(string="¿Cuántas semanas?")
     
-    are_breastfeeding = fields.Boolean(string="¿Está amamandatndo?")
+    are_breastfeeding = fields.Boolean(string="¿Está amamantando?")
 
     treatment_for_osteoporosis = fields.Boolean(string="¿Reciba tratamiento para la osteoporosis o con con bifosfonatos?")
     wich_one_medicament = fields.Char(string="¿Cuál medicamento?")
     #Medical quiz
+
+    emergency_contact_name = fields.Char(string="En caso de emergencia llamar a:") 
+    emergency_contact_number = fields.Char(string="Número")
+
+    latest_dental_appoiment = fields.Date(string="Fecha de última cita dental")
+    # latest_dental_appoiment_reason = fields.Char(string="Motivo de la última cita dental")
 
 class doctor(models.Model):
     _inherit = 'res.users'
