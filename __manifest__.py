@@ -27,7 +27,8 @@
         # 'security/ir.model.access.csv',
         'views/odonto.customer.xml',
         'views/odonto.event.xml',
-        'views/odonto.user.xml'
+        'views/odonto.user.xml',
+        'views/odonto.resourses.xml'
     ]
     # only loaded in demonstration mode
     # 'demo': [
