@@ -5,8 +5,8 @@
         <template id="assets_backend" name="static_resources_demo assets" inherit_id="web.assets_backend">
             <xpath expr="." position="inside">
 		<!--These links will be called when loading your Odoo -->
-                <link rel="stylesheet" href="/oodonto/static/src/css/style.css"/>
+                <link rel="stylesheet" href="/odonto/static/src/css/style.css"/>
             </xpath>
         </template>
-    </data>
+    </data>s
 </odoo>
