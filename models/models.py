@@ -70,7 +70,7 @@ class doctor(models.Model):
     events = fields.One2many('calendar.event', 'user_id', string='Citas')
 
 
-class driver(models.Model):
+class event(models.Model):
     _inherit = 'calendar.event'
 
-    #user_id = fields.Many2one('res.users', string='Médico responsable')
+    patient_id = fields.Many2one('res.partner', string='Paciente')
