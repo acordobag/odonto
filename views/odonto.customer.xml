@@ -48,29 +48,29 @@
               <group colspan="8">
 
                 <field name="was_patient" class="odonto-question"/>
-                <field name="why_was_patient" attrs="{'invisible': [('was_patient', '=', False)]}" class="odonto-question"/>
-                <field name="whe_was_patient" attrs="{'invisible': [('was_patient', '=', False)]}" class="odonto-question"/>
+                <field name="why_was_patient" attrs="{'invisible': [('was_patient', '=', False)]}" class="odonto-question odonto-q2"/>
+                <field name="whe_was_patient" attrs="{'invisible': [('was_patient', '=', False)]}" class="odonto-question odonto-q2"/>
 
                 <field name="was_hospitalized" class="odonto-question"/>
-                <field name="why_was_hospitalized" attrs="{'invisible': [('was_hospitalized', '=', False)]}" class="odonto-question"/>
-                <field name="whe_was_hospitalized" attrs="{'invisible': [('was_hospitalized', '=', False)]}" class="odonto-question"/>
+                <field name="why_was_hospitalized" attrs="{'invisible': [('was_hospitalized', '=', False)]}" class="odonto-question odonto-q2"/>
+                <field name="whe_was_hospitalized" attrs="{'invisible': [('was_hospitalized', '=', False)]}" class="odonto-question odonto-q2"/>
 
                 <field name="was_consuming_drugs" class="odonto-question"/>
-                <field name="whi_was_consuming_drugs" attrs="{'invisible': [('was_consuming_drugs', '=', False)]}" class="odonto-question"/>
-                <field name="why_was_consuming_drugs" attrs="{'invisible': [('was_consuming_drugs', '=', False)]}" class="odonto-question"/>
+                <field name="whi_was_consuming_drugs" attrs="{'invisible': [('was_consuming_drugs', '=', False)]}" class="odonto-question odonto-q2"/>
+                <field name="why_was_consuming_drugs" attrs="{'invisible': [('was_consuming_drugs', '=', False)]}" class="odonto-question odonto-q2"/>
 
                 <field name="is_allergic" class="odonto-question"/>
-                <field name="which_ones_is_allergic" attrs="{'invisible': [('is_allergic', '=', False)]}" class="odonto-question"/>
+                <field name="which_ones_is_allergic" attrs="{'invisible': [('is_allergic', '=', False)]}" class="odonto-question odonto-q2"/>
 
                 <field name="is_allergic" class="odonto-question"/>
 
                 <field name="are_pregnant" class="odonto-question"/>
-                <field name="how_many_weeks" attrs="{'invisible': [('are_pregnant', '=', False)]}" class="odonto-question"/>
+                <field name="how_many_weeks" attrs="{'invisible': [('are_pregnant', '=', False)]}" class="odonto-question odonto-q2"/>
 
                 <field name="are_breastfeeding" class="odonto-question"/>
 
                 <field name="treatment_for_osteoporosis" class="odonto-question"/>
-                <field name="wich_one_medicament" attrs="{'invisible': [('treatment_for_osteoporosis', '=', False)]}" class="odonto-question"/>
+                <field name="wich_one_medicament" attrs="{'invisible': [('treatment_for_osteoporosis', '=', False)]}" class="odonto-question odonto-q2"/>
 
                 <field name="emergency_contact_name" class="odonto-question"/>
                 <field name="emergency_contact_number" class="odonto-question"/>

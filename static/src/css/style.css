@@ -1,5 +1,8 @@
 .odonto-question {
     width: 0%;
     padding: 0 15px 0 0;
-    min-width: 350px;
+    min-width: 375px;
+}
+.odonto-q2{
+    font-weight: normal;
 }
