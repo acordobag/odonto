@@ -29,6 +29,11 @@
         <field name="categ_ids" position="after">
           <field name="user_id"/>
         </field>
+
+        <field name="user_id" position="attributes">
+          <attribute name="attrs">{"String":"Doctor"}</attribute>
+        </field>
+
       </field>
     </record>
   </data>
