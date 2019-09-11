@@ -83,6 +83,7 @@
                 <field name="state" invisible="1"/>
                 <field name="start_date"/>
                 <field name="name"/>
+                <field name="user_id"/>
               </tree>
             </field>
           </page>
