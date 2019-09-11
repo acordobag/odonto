@@ -58,8 +58,8 @@ class Customer(models.Model):
     wich_one_medicament = fields.Char(string="¿Cuál medicamento?")
     #Medical quiz
 
-    emergency_contact_name = fields.Char(string="En caso de emergencia llamar a:") 
-    emergency_contact_number = fields.Char(string="Número")
+    emergency_contact_name = fields.Char(string="Nombre emergencia") 
+    emergency_contact_number = fields.Char(string="Número emergencia")
 
     latest_dental_appoiment = fields.Date(string="Fecha de última cita dental")
     # latest_dental_appoiment_reason = fields.Char(string="Motivo de la última cita dental")
