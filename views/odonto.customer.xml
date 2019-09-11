@@ -20,6 +20,8 @@
 
         <field name="birthdate" position="after">
           <field name="marital_status"/>
+          <field name="emergency_contact_name"/>
+          <field name="emergency_contact_number"/>
         </field>
 
         <field name="function" position="before">
@@ -62,8 +64,6 @@
                 <field name="is_allergic" class="odonto-question"/>
                 <field name="which_ones_is_allergic" attrs="{'invisible': [('is_allergic', '=', False)]}" class="odonto-question odonto-q2"/>
 
-                <field name="is_allergic" class="odonto-question"/>
-
                 <field name="are_pregnant" class="odonto-question"/>
                 <field name="how_many_weeks" attrs="{'invisible': [('are_pregnant', '=', False)]}" class="odonto-question odonto-q2"/>
 
@@ -71,9 +71,6 @@
 
                 <field name="treatment_for_osteoporosis" class="odonto-question"/>
                 <field name="wich_one_medicament" attrs="{'invisible': [('treatment_for_osteoporosis', '=', False)]}" class="odonto-question odonto-q2"/>
-
-                <field name="emergency_contact_name" class="odonto-question"/>
-                <field name="emergency_contact_number" class="odonto-question"/>
               </group>
             </form>
           </page>
@@ -81,7 +78,7 @@
             <field name="event_ids">
               <tree>
                 <field name="state" invisible="1"/>
-                <field name="start_date"/>
+                <field name="start_datetime"/>
                 <field name="name"/>
                 <field name="user_id"/>
               </tree>
