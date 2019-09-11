@@ -78,41 +78,46 @@
             </form>
           </page>
           <page string="Citas">
-              <field name="event_ids">
-                <tree>
-                  <field name="start_date"/>
-                  <field name="name"/>
-                </tree>
-              </field>
-            </page>
-          </xpath>
+            <field name="event_ids">
+              <tree>
+                <field name="state" invisible="1"/>
+                <field name="start_date"/>
+                <field name="name"/>
+              </tree>
+            </field>
+          </page>
+        </xpath>
 
-          <!-- Hide no using fields -->
-          <xpath expr="/form/sheet/notebook/page[1]" position="attributes">
-            <attribute name="attrs">{"invisible":True}</attribute>
-          </xpath>
-          <xpath expr="/form/sheet/notebook/page[2]" position="attributes">
-            <attribute name="attrs">{"invisible":True}</attribute>
-          </xpath>
-          <xpath expr="/form/sheet/notebook/page[3]" position="attributes">
-            <attribute name="attrs">{"invisible":True}</attribute>
-          </xpath>
+        <!-- Hide no using fields -->
+        <xpath expr="/form/sheet/notebook/page[1]" position="attributes">
+          <attribute name="attrs">{"invisible":True}</attribute>
+        </xpath>
+        <xpath expr="/form/sheet/notebook/page[2]" position="attributes">
+          <attribute name="attrs">{"invisible":True}</attribute>
+        </xpath>
+        <xpath expr="/form/sheet/notebook/page[3]" position="attributes">
+          <attribute name="attrs">{"invisible":True}</attribute>
+        </xpath>
 
-          <field name="website" position="attributes">
-            <attribute name="attrs">{"invisible":True}</attribute>
-          </field>
-
-          <field name="category_id" position="attributes">
-            <attribute name="attrs">{"invisible":True}</attribute>
-          </field>
-          <field name="lang" position="attributes">
-            <attribute name="attrs">{"invisible":True}</attribute>
-          </field>
-
-          <field name="zip" position="attributes">
-            <attribute name="attrs">{"invisible":True}</attribute>
-          </field>
+        <field name="parent_id" position="attributes">
+          <attribute name="attrs">{"invisible":True}</attribute>
         </field>
-      </record>
-    </data>
-  </odoo>
+
+        <field name="website" position="attributes">
+          <attribute name="attrs">{"invisible":True}</attribute>
+        </field>
+
+        <field name="category_id" position="attributes">
+          <attribute name="attrs">{"invisible":True}</attribute>
+        </field>
+        <field name="lang" position="attributes">
+          <attribute name="attrs">{"invisible":True}</attribute>
+        </field>
+
+        <field name="zip" position="attributes">
+          <attribute name="attrs">{"invisible":True}</attribute>
+        </field>
+      </field>
+    </record>
+  </data>
+</odoo>
