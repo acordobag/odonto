@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <data>
-	<!-- Adds all assets in Odoo -->
+        <!-- Adds all assets in Odoo -->
         <template id="assets_backend" name="static_resources_demo assets" inherit_id="web.assets_backend">
             <xpath expr="." position="inside">
-		<!--These links will be called when loading your Odoo -->
+                <!--These links will be called when loading your Odoo -->
                 <link rel="stylesheet" href="/odonto/static/src/css/style.css"/>
             </xpath>
         </template>
-    </data>s
+    </data>
 </odoo>

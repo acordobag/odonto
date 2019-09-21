@@ -75,3 +75,4 @@ class event(models.Model):
     _inherit = 'calendar.event'
 
     patient_id = fields.Many2one('res.partner', string='Paciente')
+    doctor_id = fields.Many2one('res.users', string='Doctor reponsable')

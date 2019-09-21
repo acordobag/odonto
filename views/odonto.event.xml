@@ -27,11 +27,11 @@
         </xpath>
 
         <field name="categ_ids" position="after">
-          <field name="user_id"/>
+          <field name="doctor_id"/>
         </field>
 
         <field name="user_id" position="attributes">
-          <attribute name="attrs">{"String":"Doctor"}</attribute>
+          <attribute name="attrs">{"invisible":True}</attribute>
         </field>
 
       </field>

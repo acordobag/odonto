@@ -33,5 +33,6 @@
     # only loaded in demonstration mode
     # 'demo': [
     #     'demo/demo.xml',
-    # ],
+    # ], "/odoo/odoo-server/addons/web_calendar/static/lib/fullcalendar/js/fullcalendar.js" cambiar el min y em max time
+
 }
